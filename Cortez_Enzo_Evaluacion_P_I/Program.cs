@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Cortez_Enzo_Evaluacion_P_I.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<Cortez_Enzo_Evaluacion_P_IContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Cortez_Enzo_Evaluacion_P_IContext") ?? throw new InvalidOperationException("Connection string 'Cortez_Enzo_Evaluacion_P_IContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
