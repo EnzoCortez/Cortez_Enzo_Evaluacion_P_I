@@ -28,5 +28,7 @@ namespace Cortez_Enzo_Evaluacion_P_I.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }
