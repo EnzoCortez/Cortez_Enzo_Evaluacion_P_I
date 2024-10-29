@@ -11,7 +11,7 @@ namespace Cortez_Enzo_Evaluacion_P_I.Models
         [StringLength(800)]
         public string Modelo { get; set; }
         [Range(0,5000)]
-        public decimal Precio { get; set; }
+        public double Precio { get; set; }
         public DateOnly Año { get; set; }
     }
 }

@@ -13,15 +13,15 @@ namespace Cortez_Enzo_Evaluacion_P_I.Models
         [StringLength(200)]
         public string Nombre {  get; set; }
 
-        [AllowNull]
+        
         [Range(0,100)]
-        public decimal Mesada { get; set; }
+        public double Mesada { get; set; }
 
-        [AllowNull]
-        public Boolean? Estudiante { get; set; }
-        public DateOnly? Cummpleaños { get; set; }
+        
+        public bool Estudiante { get; set; }
+        public DateOnly Cummpleaños { get; set; }
 
-        public Celular Celular { get; set; }
+        public Celular? Celular { get; set; }
 
         [ForeignKey("Celular")]
         public int CelularId { get; set; }
